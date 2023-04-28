@@ -1,0 +1,28 @@
+///Let's learn about list comprehensions! You are given three integers  and  representing 
+the dimensions of a cuboid along with an integer . X,Y,Z
+Print a list of all possible coordinates given by  on a 3D grid where the sum of (I+J+K) is not equal to . Here, 
+. Please use list comprehensions rather than multiple loops, as a learning exercise.///
+
+
+code:
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    l = []
+    for i in range(x+1):
+        for j in range(y+1):
+            for k in range(z+1):
+                if i+j+k == n:
+                    continue
+                l.append([i,j,k])                
+    print(l)
+
+
+
+result:
+Your Output (stdout)
+[[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 2], [0, 2, 1], [0, 2, 2], [1, 0, 0], [1, 0, 2], [1, 1, 1], [1, 1, 2], [1, 2, 0], [1, 2, 1], [1, 2, 2], [2, 0, 1], [2, 0, 2], [2, 1, 0], [2, 1, 1], [2, 1, 2], [2, 2, 0], [2, 2, 1], [2, 2, 2]]
+Expected Output
+[[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 2], [0, 2, 1], [0, 2, 2], [1, 0, 0], [1, 0, 2], [1, 1, 1], [1, 1, 2], [1, 2, 0], [1, 2, 1], [1, 2, 2], [2, 0, 1], [2, 0, 2], [2, 1, 0], [2, 1, 1], [2, 1, 2], [2, 2, 0], [2, 2, 1], [2, 2, 2]]
